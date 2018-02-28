@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code4newbies</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Code4Newbies</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#"><i class="large material-icons">list</i></a></li>
+          <li><a href="<%= pages_about_path %>"><i class="large material-icons">perm_identity</i></a></li>
+          <li><a href="<%= pages_contact_path %>"><i class="large material-icons">add_location</i></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#"><i class="large material-icons">list</i></a></li>
+          <li><a href="<%= pages_about_path %>"><i class="large material-icons">perm_identity</i></a></li>
+          <li><a href="<%= pages_contact_path %>"><i class="large material-icons">add_location</i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col m10 offset-m1">
+        <%= yield %>
+      </div>
+    </div>
+
+    <!-- <%= yield %> -->
+
+    <script>
+       $(".button-collapse").sideNav();
+    </script>
+  </body>
+</html>
