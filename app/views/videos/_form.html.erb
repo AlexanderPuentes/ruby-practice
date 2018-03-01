@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :wistio %>
-    <%= form.text_field :wistio, id: :video_wistio %>
+  <div class="input-field">
+    <%= form.text_field :wistio, id: :video_wistio, :placeholder => 'Link', :length => '10'  %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :video_description %>
+  <div class="input-field">
+    <%= form.text_field :title, id: :video_title, :placeholder => 'Title', :length => '20' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="input-field">
+    <%= form.text_area :description, id: :video_description, :placeholder => 'Description', :length => '800', :class => 'materialize-textarea' %>
   </div>
+
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+  <a href="<%= videos_path %>" class="btn waves-effect waves-light" name="action">Back</a>
 <% end %>
